@@ -1,5 +1,6 @@
 import React from "react";
 import { PageProps } from "gatsby";
+import { Helmet } from "react-helmet";
 
 import "../styles/fonts.css";
 import { GlobalStyles } from "../styles/global_styles";
@@ -19,6 +20,7 @@ import Jan from "../images/jan";
 
 const Home: React.FC<PageProps> = () => (
   <main>
+    <MetaData />
     <GlobalStyles />
     <Background>
       <HeaderContainer>
@@ -46,11 +48,40 @@ const Home: React.FC<PageProps> = () => (
       >
         <LinkedIn />
       </a>
-      <a href="https://github.com/sltmyr" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://github.com/sltmyr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <GitHub />
       </a>
     </FooterContainer>
   </main>
+);
+
+const MetaData: React.FC = () => (
+  <Helmet
+    htmlAttributes={{ lang: "en" }}
+    title={"Jan Sültemeyer"}
+    meta={[
+      {
+        name: `description`,
+        content: "my personal homepage",
+      },
+      {
+        property: `og:title`,
+        content: "Jan Sültemeyer",
+      },
+      {
+        property: `og:description`,
+        content: "my personal homepage",
+      },
+      {
+        property: `og:type`,
+        content: `website`,
+      },
+    ]}
+  />
 );
 
 export default Home;

@@ -10,5 +10,17 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Jan Sültemeyer's homepage",
+        short_name: "Jan Sültemeyer",
+        start_url: "/",
+        background_color: "#45b649",
+        theme_color: "#dce35b",
+        display: "standalone",
+        icon: "src/images/favicon.png",
+      },
+    },
   ],
 };
