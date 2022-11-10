@@ -1,6 +1,8 @@
 import React from "react";
 import { PageProps } from "gatsby";
 import { Helmet } from "react-helmet";
+import Div100vh from "react-div-100vh";
+import { StaticImage } from "gatsby-plugin-image";
 
 import "../styles/fonts.css";
 import { GlobalStyles } from "../styles/global_styles";
@@ -16,46 +18,51 @@ import {
   HeaderContainer,
   Background,
 } from "../styles/index.styles";
-import Jan from "../images/jan";
+// import Jan from "../images/jan";
 
 const Home: React.FC<PageProps> = () => (
   <main>
     <MetaData />
     <GlobalStyles />
-    <Background>
-      <HeaderContainer>
-        <Header>JAN SÜLTEMEYER</Header>
-      </HeaderContainer>
-      <ImageContainer>
-        <MainImage>
-          <Jan />
-        </MainImage>
-      </ImageContainer>
-      <TextContainer>
-        <p>
-          full stack developer. <br /> cloud engineer. <br /> pizza lover.
-        </p>
-      </TextContainer>
-    </Background>
-    <FooterContainer>
-      <a href="mailto:jan@sultemeyer.com">
-        <MailIcon />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/jan-s%C3%BCltemeyer-483576149"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <LinkedIn />
-      </a>
-      <a
-        href="https://github.com/sltmyr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <GitHub />
-      </a>
-    </FooterContainer>
+    <Div100vh>
+      <Background>
+        <HeaderContainer>
+          <Header>JAN SÜLTEMEYER</Header>
+        </HeaderContainer>
+        <ImageContainer>
+          <StaticImage
+            src="../images/jan.png"
+            alt="Photo of Jan"
+            style={{ width: "350px" }}
+          />
+        </ImageContainer>
+        <TextContainer>
+          <p>
+            👨‍💻 full stack developer. <br /> ☁️ cloud engineer. <br /> 🪡
+            aspiring tailor.
+          </p>
+        </TextContainer>
+      </Background>
+      <FooterContainer>
+        <a href="mailto:jan@sultemeyer.com">
+          <MailIcon />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jan-s%C3%BCltemeyer-483576149"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedIn />
+        </a>
+        <a
+          href="https://github.com/sltmyr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GitHub />
+        </a>
+      </FooterContainer>
+    </Div100vh>
   </main>
 );
 

@@ -8,7 +8,7 @@ export const Background = styled.div`
   background: #dce35b;
   background: -webkit-linear-gradient(to bottom, #dce35b, #45b649);
   background: linear-gradient(to bottom, #dce35b, #45b649);
-  height: 90vh;
+  height: 90%;
 `;
 
 export const HeaderContainer = styled.div`
@@ -44,7 +44,7 @@ export const TextContainer = styled.div`
 `;
 
 export const FooterContainer = styled.div`
-  height: 10vh;
+  height: 10%;
   width: 100%;
   display: flex;
   justify-content: center;
