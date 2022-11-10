@@ -13,7 +13,7 @@ export const Background = styled.div`
 
 export const HeaderContainer = styled.div`
   width: 100%;
-  height: 15vh;
+  height: 15%;
   display: flex;
   align-items: center;
 `;
@@ -29,7 +29,7 @@ export const ImageContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 60%;
 `;
 
 export const MainImage = styled.div`
@@ -40,7 +40,7 @@ export const TextContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  height: 15vh;
+  height: 15%;
 `;
 
 export const FooterContainer = styled.div`
