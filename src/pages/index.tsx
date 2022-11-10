@@ -33,7 +33,7 @@ const Home: React.FC<PageProps> = () => (
           <StaticImage
             src="../images/jan.png"
             alt="Photo of Jan"
-            style={{ width: "350px" }}
+            style={{ width: "300px" }}
           />
         </ImageContainer>
         <TextContainer>
