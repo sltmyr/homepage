@@ -33,13 +33,14 @@ const Home: React.FC<PageProps> = () => (
           <StaticImage
             src="../images/jan.png"
             alt="Photo of Jan"
-            style={{ width: "300px" }}
+            style={{ height: "100%", maxHeight: "300px", maxWidth: "300px" }}
+            imgStyle={{ objectFit: "contain" }}
           />
         </ImageContainer>
         <TextContainer>
           <p>
-            👨‍💻 full stack developer. <br /> ☁️ cloud engineer. <br /> 🪡
-            aspiring tailor.
+            👨‍💻 full stack developer. <br /> ☁️ cloud engineer. <br /> 🪡 aspiring
+            tailor.
           </p>
         </TextContainer>
       </Background>
