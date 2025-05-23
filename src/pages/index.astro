@@ -5,9 +5,6 @@ import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import Footer from "../components/Footer.astro";
 
-const name = "Jan Sültemeyer";
-const title = "Software Engineer";
-
 const technologies = [
   {
     name: "React",
@@ -65,8 +62,8 @@ const projects = [
 ];
 ---
 
-<Layout title={`${name} | ${title}`}>
-  <Header name={name} title={title} />
+<Layout title={`Jan Sültemeyer | Software Engineer`}>
+  <Header />
   <main>
     <About technologies={technologies} />
     <Projects projects={projects} />
