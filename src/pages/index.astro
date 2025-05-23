@@ -1,71 +1,74 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import About from '../components/About.astro';
-import Projects from '../components/Projects.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
 
-// Sample data (Replace with your own)
-const name = "Your Name";
-const title = "Frontend Developer";
-const photoUrl = "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop";
-const description = "I'm a passionate frontend developer with over 5 years of experience building modern, responsive web applications. I specialize in React, Vue, and TypeScript, and I'm always excited to learn new technologies. When I'm not coding, you'll find me hiking, reading sci-fi novels, or experimenting with new recipes in the kitchen.";
+const name = "Jan Sültemeyer";
+const title = "Software Engineer";
 
 const technologies = [
   {
     name: "React",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
   },
   {
     name: "TypeScript",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png",
   },
   {
     name: "Tailwind CSS",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png",
   },
   {
     name: "Node.js",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png",
   },
   {
     name: "GraphQL",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/512px-GraphQL_Logo.svg.png"
-  }
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/512px-GraphQL_Logo.svg.png",
+  },
 ];
 
 const projects = [
   {
     id: "project1",
     title: "E-Commerce Platform",
-    description: "A fully featured e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product catalog, shopping cart, payment processing, and order management. The application uses Redux for state management and implements responsive design for mobile and desktop users.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800&auto=format&fit=crop",
+    description:
+      "A fully featured e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product catalog, shopping cart, payment processing, and order management. The application uses Redux for state management and implements responsive design for mobile and desktop users.",
+    image:
+      "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800&auto=format&fit=crop",
     link: "https://github.com/",
-    technologies: ["React", "Node.js", "MongoDB", "Redux"]
+    technologies: ["React", "Node.js", "MongoDB", "Redux"],
   },
   {
     id: "project2",
     title: "Task Management App",
-    description: "A collaborative task management application that helps teams organize and track their projects. Built with Vue.js and Firebase, it includes features like real-time updates, task assignments, due dates, and project analytics. The app uses Vuex for state management and implements drag-and-drop functionality for an intuitive user experience.",
-    image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=800&auto=format&fit=crop",
+    description:
+      "A collaborative task management application that helps teams organize and track their projects. Built with Vue.js and Firebase, it includes features like real-time updates, task assignments, due dates, and project analytics. The app uses Vuex for state management and implements drag-and-drop functionality for an intuitive user experience.",
+    image:
+      "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=800&auto=format&fit=crop",
     link: "https://github.com/",
-    technologies: ["Vue.js", "Firebase", "Vuex", "SCSS"]
+    technologies: ["Vue.js", "Firebase", "Vuex", "SCSS"],
   },
   {
     id: "project3",
     title: "Weather Dashboard",
-    description: "A weather dashboard that provides current conditions and forecasts for locations worldwide. Built with TypeScript and the OpenWeather API, it features interactive maps, hourly and daily forecasts, and severe weather alerts. The application uses Chart.js for data visualization and implements geolocation for automatic local weather updates.",
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=800&auto=format&fit=crop",
+    description:
+      "A weather dashboard that provides current conditions and forecasts for locations worldwide. Built with TypeScript and the OpenWeather API, it features interactive maps, hourly and daily forecasts, and severe weather alerts. The application uses Chart.js for data visualization and implements geolocation for automatic local weather updates.",
+    image:
+      "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=800&auto=format&fit=crop",
     link: "https://github.com/",
-    technologies: ["TypeScript", "React", "Chart.js", "API Integration"]
-  }
+    technologies: ["TypeScript", "React", "Chart.js", "API Integration"],
+  },
 ];
 ---
 
 <Layout title={`${name} | ${title}`}>
-  <Header name={name} title={title} photoUrl={photoUrl} />
+  <Header name={name} title={title} />
   <main>
-    <About description={description} technologies={technologies} />
+    <About technologies={technologies} />
     <Projects projects={projects} />
   </main>
   <Footer />

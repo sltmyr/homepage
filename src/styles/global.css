@@ -1,1 +1,43 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "BananaGrotesk";
+  src: url("/fonts/BananaGrotesk-Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garamond";
+  src: url("/fonts/Garamond.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garamond";
+  src: url("/fonts/Garamond-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garamond";
+  src: url("/fonts/Garamond-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garamond";
+  src: url("/fonts/Garamond-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "BananaGrotesk", "sans-serif";
+  --font-serif: "Garamond", "serif";
+}
