@@ -16,8 +16,12 @@ const { title = "My Portfolio" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-gray-50 text-gray-800">
-    <slot />
+  <body class="text-gray-800">
+    <div
+      class="fixed top-0 h-screen w-full bg-gradient-to-t from-white to-secondary overflow-auto"
+    >
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -28,12 +32,5 @@ const { title = "My Portfolio" } = Astro.props;
 
   html {
     scroll-behavior: smooth;
-  }
-
-  .sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    transition: all 0.3s ease;
   }
 </style>
