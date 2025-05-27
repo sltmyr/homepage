@@ -17,11 +17,7 @@ const { title = "My Portfolio" } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="text-gray-800">
-    <div
-      class="fixed top-0 h-screen w-full bg-gradient-to-t from-white to-secondary overflow-auto"
-    >
-      <slot />
-    </div>
+    <slot />
   </body>
 </html>
 
