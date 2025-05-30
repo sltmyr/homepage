@@ -40,6 +40,8 @@
 @theme {
   --font-sans: "BananaGrotesk", "sans-serif";
   --font-serif: "Garamond", "serif";
-  --color-primary: #4f7b58;
-  --color-secondary: #fefbf6;
+  --color-primary: #213e60;
+  --color-secondary: #f4f2ef;
+  --color-tertiary: #94b6ef;
+  --color-accent: #e68c3a;
 }
