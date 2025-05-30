@@ -9,7 +9,7 @@ import mboardImage from "../assets/m-board.svg";
 const projects = [
   {
     title: "Smart Pricing for Retail",
-    description: `A web app tailored to retail merchants that automatically imports a merchant's stock and sales data to make automated, data-driven pricing decisions. The system uses a mixture of battle-tested industry heuristics, modern AI models, and data analytics to create recommendations for pricing and inventory planning. I was the main developer responsible for designing and implementing the entire application dealing with the data ingestion and processing, as well as the customer-facing React application.`,
+    description: `A web app tailored to retail merchants that automatically imports a merchant's stock and sales data to make automated, data-driven pricing decisions. The system uses a mixture of battle-tested industry heuristics, modern AI models, and data analytics to create recommendations for pricing and inventory planning. I was the main developer responsible for designing and implementing the entire application dealing with the data ingestion and processing, as well as the customer-facing web application.`,
     image: aiveeImage,
     link: "https://aivee.one",
     technologies: ["React", "TypeScript", "Next.js", "Supabase", "AWS"],
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: "BMW's Cloud Native Data Lake",
-    description: `I was part of the team building a data lake in the AWS Cloud, handling petabytes of data for the BMW Group. I worked as a full-stack developer on the data portal, a React app that enables everyone within the organization to share, find, understand, and work with data. The back end is based on an event-driven serverless architecture around AppSync, Lambda, and DynamoDB. You can find a more detailed description of the project on the AWS blog.`,
+    description: `I was part of the team building a data lake in the AWS Cloud, handling petabytes of data for the BMW Group. I worked as a full-stack developer on the data portal, a web app that enables everyone within the organization to share, find, understand, and work with data. The back end is based on an event-driven, serverless architecture in AWS using AppSync, Lambda, and DynamoDB. You can find a more detailed description of the project on the AWS blog.`,
     image: bmwImage,
     link: "https://aws.amazon.com/solutions/case-studies/bmw-group-case-study/",
     technologies: ["AWS", "Python", "Terraform", "ETL", "React", "GraphQL"],
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Pyne Studio Online Shop",
     description:
-      "Together with my wife, we launched a fashion brand, and I built our custom home page and online shop as an Astro app with a small serverless back end hosted on AWS that uses Stripe as a payment processor.",
+      "Together with my wife, we launched a fashion brand and I built our custom home page and online shop as an Astro app with a small serverless back end hosted on AWS that uses Stripe as a payment processor.",
     image: pyneImage,
     link: "https://pyne.studio/",
     technologies: ["Astro", "Stripe", "Tailwind"],
@@ -109,7 +109,7 @@ const projects = [
           </div>
 
           <div
-            class={`ipad-container w-5/6 lg:!w-1/2 lg:h-80 xl:h-auto transition-all duration-700 ease-out relative bg-gradient-to-br from-gray-100 to-white rounded-3xl p-8 shadow-2xl shadow-black/10 max-w-2xl  ${
+            class={`ipad-container w-full sm:w-5/6 lg:!w-1/2 lg:h-80 xl:h-auto transition-all duration-700 ease-out relative bg-gradient-to-br from-gray-100 to-white rounded-3xl p-3 sm:p-6 lg:p-8 shadow-2xl shadow-black/10 max-w-2xl  ${
               index % 2 === 0
                 ? "slide-from-right translate-x-48 lg:rounded-r-none lg:-mr-8 lg:ml-auto"
                 : "slide-from-left -translate-x-48 lg:rounded-l-none lg:-ml-8 lg:mr-auto"
