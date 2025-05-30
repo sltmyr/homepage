@@ -1,49 +1,55 @@
 ---
+import { Image } from "astro:assets";
+import aiveeImage from "../assets/aivee.png";
+import opcalcImage from "../assets/trackgreeks.jpg";
+import bmwImage from "../assets/cdh.png";
+import pyneImage from "../assets/pyne-studio.png";
+import mboardImage from "../assets/m-board.svg";
+
 const projects = [
   {
     title: "Smart Pricing for Retail",
-    description:
-      "A fully featured e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product catalog, shopping cart, payment processing, and order management. The application uses Redux for state management and implements responsive design for mobile and desktop users.",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800&auto=format&fit=crop",
-    link: "https://github.com/",
-    technologies: ["React", "Node.js", "MongoDB", "Redux"],
+    description: `A web app tailored to retail merchants that automatically imports a merchant's stock and sales data to make automated, data-driven pricing decisions. The system uses a mixture of battle-tested industry heuristics, modern AI models, and data analytics to create recommendations for pricing and inventory planning. I was the main developer responsible for designing and implementing the entire application dealing with the data ingestion and processing, as well as the customer-facing React application.`,
+    image: aiveeImage,
+    link: "https://aivee.one",
+    technologies: ["React", "TypeScript", "Next.js", "Supabase", "AWS"],
   },
   {
     title: "Stock Option Trading App",
-    description:
-      "A collaborative task management application that helps teams organize and track their projects. Built with Vue.js and Firebase, it includes features like real-time updates, task assignments, due dates, and project analytics. The app uses Vuex for state management and implements drag-and-drop functionality for an intuitive user experience.",
-    image:
-      "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=800&auto=format&fit=crop",
-    link: "https://github.com/",
-    technologies: ["Vue.js", "Firebase", "Vuex", "SCSS"],
+    description: `A stock options trading platform helping traders optimize their investment strategies. I helped build two tools: a calculator that helped predict the profitability of certain stock option strategies and trades and a "scanner" that helped traders find profitable investment opportunities. As a full-stack lead engineer, I helped build these tools on a state-of-the-art tech stack. The main challenge was ensuring that large amounts of data were kept up to date and displaying them in a performant, user-friendly, and accessible web app.`,
+    image: opcalcImage,
+    link: "https://app.opcalc.com/",
+    technologies: [
+      "AWS",
+      "Python",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "Next.js",
+    ],
   },
   {
     title: "BMW's Cloud Native Data Lake",
-    description:
-      "A weather dashboard that provides current conditions and forecasts for locations worldwide. Built with TypeScript and the OpenWeather API, it features interactive maps, hourly and daily forecasts, and severe weather alerts. The application uses Chart.js for data visualization and implements geolocation for automatic local weather updates.",
-    image:
-      "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=800&auto=format&fit=crop",
-    link: "https://github.com/",
-    technologies: ["TypeScript", "React", "Chart.js", "API Integration"],
+    description: `I was part of the team building a data lake in the AWS Cloud, handling petabytes of data for the BMW Group. I worked as a full-stack developer on the data portal, a React app that enables everyone within the organization to share, find, understand, and work with data. The back end is based on an event-driven serverless architecture around AppSync, Lambda, and DynamoDB. You can find a more detailed description of the project on the AWS blog.`,
+    image: bmwImage,
+    link: "https://aws.amazon.com/solutions/case-studies/bmw-group-case-study/",
+    technologies: ["AWS", "Python", "Terraform", "ETL", "React", "GraphQL"],
   },
   {
     title: "Pyne Studio Online Shop",
     description:
-      "A weather dashboard that provides current conditions and forecasts for locations worldwide. Built with TypeScript and the OpenWeather API, it features interactive maps, hourly and daily forecasts, and severe weather alerts. The application uses Chart.js for data visualization and implements geolocation for automatic local weather updates.",
-    image:
-      "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=800&auto=format&fit=crop",
-    link: "https://github.com/",
-    technologies: ["TypeScript", "React", "Chart.js", "API Integration"],
+      "Together with my wife, we launched a fashion brand, and I built our custom home page and online shop as an Astro app with a small serverless back end hosted on AWS that uses Stripe as a payment processor.",
+    image: pyneImage,
+    link: "https://pyne.studio/",
+    technologies: ["Astro", "Stripe", "Tailwind"],
   },
   {
     title: "Multichannel Solution for Retail",
     description:
-      "A weather dashboard that provides current conditions and forecasts for locations worldwide. Built with TypeScript and the OpenWeather API, it features interactive maps, hourly and daily forecasts, and severe weather alerts. The application uses Chart.js for data visualization and implements geolocation for automatic local weather updates.",
-    image:
-      "https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=800&auto=format&fit=crop",
-    link: "https://github.com/",
-    technologies: ["TypeScript", "React", "Chart.js", "API Integration"],
+      "An app that allows fashion retailers to sell their stock on various online channels like Amazon and Zalando. It takes care of stock upload, order processing, and smart pricing. The app was already running when I came into the project, and I was responsible for evolving its architecture to be more reliable and cost-efficient. I then took care of operations and added new features.",
+    image: mboardImage,
+    link: "https://michelberger.digital/products/m-board",
+    technologies: ["AWS", "Python", "Elasticsearch", "ETL"],
   },
 ];
 ---
@@ -103,7 +109,7 @@ const projects = [
           </div>
 
           <div
-            class={`ipad-container w-5/6 lg:!w-1/2  transition-all duration-700 ease-out relative bg-gradient-to-br from-gray-100 to-white rounded-3xl p-8 shadow-2xl shadow-black/10 max-w-2xl  ${
+            class={`ipad-container w-5/6 lg:!w-1/2 lg:h-80 xl:h-auto transition-all duration-700 ease-out relative bg-gradient-to-br from-gray-100 to-white rounded-3xl p-8 shadow-2xl shadow-black/10 max-w-2xl  ${
               index % 2 === 0
                 ? "slide-from-right translate-x-48 lg:rounded-r-none lg:-mr-8 lg:ml-auto"
                 : "slide-from-left -translate-x-48 lg:rounded-l-none lg:-ml-8 lg:mr-auto"
@@ -115,12 +121,21 @@ const projects = [
               }`}
             />
 
-            <div class="bg-black rounded-2xl p-[3px] shadow-[inset_0_3px_12px_rgba(0,0,0,0.4)]">
-              <div class="bg-white rounded-xl overflow-hidden aspect-[4/3] shadow-lg">
-                <img
+            <div class="bg-black rounded-2xl p-[3px] shadow-[inset_0_3px_12px_rgba(0,0,0,0.4)] h-full">
+              <div class="bg-white rounded-xl overflow-hidden h-full shadow-lg">
+                {/* <img
                   src={project.image}
                   alt={project.title}
                   class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                /> */}
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={1000}
+                  height={1000}
+                  densities={[1, 2]}
+                  class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  loading="eager"
                 />
               </div>
             </div>
