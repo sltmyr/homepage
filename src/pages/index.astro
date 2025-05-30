@@ -5,29 +5,6 @@ import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import Footer from "../components/Footer.astro";
 
-const technologies = [
-  {
-    name: "React",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
-  },
-  {
-    name: "TypeScript",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png",
-  },
-  {
-    name: "Node.js",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png",
-  },
-  {
-    name: "GraphQL",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/512px-GraphQL_Logo.svg.png",
-  },
-];
-
 const projects = [
   {
     id: "project1",
@@ -64,8 +41,8 @@ const projects = [
 
 <Layout title={`Jan Sültemeyer | Software Engineer`}>
   <Header />
-  <main>
-    <About technologies={technologies} />
+  <main class="bg-secondary">
+    <About />
     <Projects projects={projects} />
   </main>
   <Footer />

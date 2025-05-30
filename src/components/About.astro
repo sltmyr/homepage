@@ -6,43 +6,74 @@ interface Props {
   }[];
 }
 
+const technologies = [
+  {
+    name: "React",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png",
+  },
+  {
+    name: "Node.js",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png",
+  },
+  {
+    name: "GraphQL",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/512px-GraphQL_Logo.svg.png",
+  },
+];
+
 const description = `
-I am an experienced, full-stack software engineer with a track record of delivering high-quality software and a particular interest in data-heavy projects.
 Working with clients from different countries, in teams of different sizes, and with different technologies made me a well rounded engineer with a focus on reducing complexity.
 In my experience, keeping things simple is the only way to deliver solid, maintainable software while keeping the development speed high and delivering value.
 I feel at home in the AWS cloud, the React ecosystem and projects with large amounts of data.`;
-
-const { technologies } = Astro.props;
 ---
 
 <section id="about" class="py-20">
   <div class="container mx-auto px-4 md:px-6 max-w-prose">
-    <p class="text-lg text-gray-700 mb-12 leading-relaxed">
-      {description}
-    </p>
-
-    <div>
-      <h3 class="text-xl font-semibold mb-6 text-center">
-        Technologies I Love
-      </h3>
-      <div
-        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center"
+    <p class="text-3xl text-gray-700 mb-12 leading-relaxed">
+      <span
+        class="font-bold underline decoration-4 decoration-primary underline-offset-8"
+        >Full-stack</span
+      > software engineer with a track record of delivering <span
+        class="font-bold underline decoration-4 decoration-primary underline-offset-8"
+        >high-quality</span
+      > software and a particular interest in <span
+        class="font-bold underline decoration-4 decoration-primary underline-offset-8"
+        >data-heavy</span
       >
-        {
-          technologies.map((tech) => (
-            <div class="flex flex-col items-center group">
-              <div class="w-16 h-16 flex items-center justify-center mb-2 bg-gray-100 rounded-lg p-3 transition-transform group-hover:scale-110">
-                <img
-                  src={tech.icon}
-                  alt={tech.name}
-                  class="max-w-full max-h-full"
-                />
-              </div>
-              <span class="text-sm font-medium text-gray-700">{tech.name}</span>
+      projects.
+    </p>
+  </div>
+  <p class="text-lg text-gray-700 my-24">
+    {description}
+  </p>
+
+  <div>
+    <h3 class="text-xl font-semibold mb-6 text-center">Technologies I Love</h3>
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center"
+    >
+      {
+        technologies.map((tech) => (
+          <div class="flex flex-col items-center group">
+            <div class="w-16 h-16 flex items-center justify-center mb-2 bg-gray-100 rounded-lg p-3 transition-transform group-hover:scale-110">
+              <img
+                src={tech.icon}
+                alt={tech.name}
+                class="max-w-full max-h-full"
+              />
             </div>
-          ))
-        }
-      </div>
+            <span class="text-sm font-medium text-gray-700">{tech.name}</span>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
