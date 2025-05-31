@@ -88,48 +88,70 @@ import janImage from "../assets/jan.png";
 <div class="h-screen"></div>
 
 <script>
-  const header = document.getElementById("header");
-  const title = document.getElementById("title");
-  const subtitle = document.getElementById("subtitle");
-  const links = document.getElementById("links");
-  const image = document.getElementById("image");
-  const minHeaderHeight = 100;
-  const maxScrollDistance = window.innerHeight;
+  function initializeHeader() {
+    const header = document.getElementById("header");
+    const title = document.getElementById("title");
+    const subtitle = document.getElementById("subtitle");
+    const links = document.getElementById("links");
+    const image = document.getElementById("image");
 
-  function updateHeader() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const startHeight = window.innerHeight;
-    const newHeight = Math.max(startHeight - scrollTop, minHeaderHeight);
-    header.style.height = `${newHeight}px`;
-    const progress = Math.min(scrollTop / maxScrollDistance, 1);
-    const titleScale = Math.max(1 - progress, 0.7);
-    title.style.transform = `scale(${titleScale})`;
-    const titleMargin = progress * 20;
-    title.style.marginTop = `${-titleMargin}px`;
-    const imageScale = Math.max(1 - progress, 0.4);
-    image.style.transform = `scale(${imageScale})`;
-    const subtitleOpacity = Math.max(1 - progress * 2, 0);
-    subtitle.style.opacity = subtitleOpacity;
-    subtitle.style.transform = `scale(${subtitleOpacity})`;
-    const subtitleMargin = Math.max(1 - progress * 2, 0);
-    subtitle.style.margin = `${subtitleMargin}px`;
-    const linksMargin = -progress * 40;
-    links.style.marginTop = `${linksMargin}px`;
+    // Check if all elements exist before proceeding
+    if (!header || !title || !subtitle || !links || !image) {
+      console.warn("Header elements not found, retrying...");
+      return false;
+    }
+
+    const minHeaderHeight = 100;
+    const maxScrollDistance = window.innerHeight;
+
+    function updateHeader() {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const startHeight = window.innerHeight;
+      const newHeight = Math.max(startHeight - scrollTop, minHeaderHeight);
+      header!.style.height = `${newHeight}px`;
+      const progress = Math.min(scrollTop / maxScrollDistance, 1);
+      const titleScale = Math.max(1 - progress, 0.7);
+      title!.style.transform = `scale(${titleScale})`;
+      const titleMargin = progress * 20;
+      title!.style.marginTop = `${-titleMargin}px`;
+      const imageScale = Math.max(1 - progress, 0.4);
+      image!.style.transform = `scale(${imageScale})`;
+      const subtitleOpacity = Math.max(1 - progress * 2, 0);
+      subtitle!.style.opacity = `${subtitleOpacity}`;
+      subtitle!.style.transform = `scale(${subtitleOpacity})`;
+      const subtitleMargin = Math.max(1 - progress * 2, 0);
+      subtitle!.style.margin = `${subtitleMargin}px`;
+      const linksMargin = -progress * 40;
+      links!.style.marginTop = `${linksMargin}px`;
+    }
+
+    let ticking = false;
+    function handleScroll() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateHeader();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", () => updateHeader());
+
+    updateHeader();
+    return true;
   }
 
-  let ticking = false;
-  function handleScroll() {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        updateHeader();
-        ticking = false;
-      });
-      ticking = true;
+  // Try to initialize immediately
+  if (!initializeHeader()) {
+    // If elements aren't ready, wait for DOM content to load
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initializeHeader);
+    } else {
+      // DOM is already loaded, try again after a short delay
+      setTimeout(initializeHeader, 100);
     }
   }
-
-  window.addEventListener("scroll", handleScroll);
-  window.addEventListener("resize", () => updateHeader());
-
-  updateHeader();
 </script>
