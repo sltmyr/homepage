@@ -41,7 +41,7 @@ const projects = [
       "Together with my wife, we launched a fashion brand and I built our custom home page and online shop as an Astro app with a small serverless back end hosted on AWS that uses Stripe as a payment processor.",
     image: pyneImage,
     link: "https://pyne.studio/",
-    technologies: ["Astro", "Stripe", "Tailwind"],
+    technologies: ["Astro", "Stripe", "SST"],
   },
   {
     title: "Multichannel Solution for Retail",
@@ -55,9 +55,10 @@ const projects = [
 ---
 
 <section id="projects" class="py-20 overflow-hidden">
-  <h2 class="mx-auto px-4 md:px-6 text-xl font-bold lg:mb-20 max-w-prose">
-    These are a few of the projects I worked on in the 10 years I've been
-    working as a professional software engineer.
+  <h2
+    class="mx-auto px-4 md:px-6 text-4xl md:text-6xl text-center uppercase lg:mb-20 text-accent font-black"
+  >
+    My Projects
   </h2>
 
   <div class="space-y-16 lg:space-y-32">
@@ -109,10 +110,10 @@ const projects = [
           </div>
 
           <div
-            class={`ipad-container w-full sm:w-5/6 lg:!w-1/2 lg:h-80 xl:h-auto transition-all duration-700 ease-out relative bg-gradient-to-br from-gray-100 to-white rounded-3xl p-3 sm:p-6 lg:p-8 shadow-2xl shadow-black/10 max-w-2xl  ${
+            class={`ipad-container aspect-[16/9] w-full sm:w-5/6 lg:!w-1/2 lg:h-80 xl:h-auto transition-all duration-700 ease-out relative bg-gradient-to-br from-gray-100 to-white rounded-3xl p-3  shadow-2xl shadow-black/10 max-w-2xl  ${
               index % 2 === 0
-                ? "slide-from-right translate-x-48 lg:rounded-r-none lg:-mr-8 lg:ml-auto"
-                : "slide-from-left -translate-x-48 lg:rounded-l-none lg:-ml-8 lg:mr-auto"
+                ? "slide-from-right translate-x-64 lg:rounded-r-none lg:-mr-8 lg:ml-auto"
+                : "slide-from-left -translate-x-64 lg:rounded-l-none lg:-ml-8 lg:mr-auto"
             }`}
           >
             <div
@@ -131,8 +132,8 @@ const projects = [
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={1000}
-                  height={1000}
+                  width={1600}
+                  height={900}
                   densities={[1, 2]}
                   class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   loading="eager"
@@ -157,12 +158,7 @@ const projects = [
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const ipadContainer = entry.target as HTMLElement;
-        const index = parseInt(ipadContainer.dataset.projectIndex || "0");
-
-        setTimeout(() => {
-          ipadContainer.classList.remove("-translate-x-48", "translate-x-48");
-        }, index * 200);
-
+        ipadContainer.classList.remove("-translate-x-64", "translate-x-64");
         observer.unobserve(ipadContainer);
       }
     });
