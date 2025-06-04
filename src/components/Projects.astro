@@ -8,6 +8,21 @@ import mboardImage from "../assets/m-board.svg";
 
 const projects = [
   {
+    title: "Pyne Studio",
+    description:
+      "Together with my wife, I run a fashion brand where we design, produce, and sell vintage-inspired one-of-a-kind pieces. We mostly sell online and via boutique wholesale-platforms and I take care of that. I built our custom home page and online shop, and make sure that our product data is synced correctly between our sales channels. I also take care of customer communications and have recently taking up tailoring.",
+    image: pyneImage,
+    link: "https://pyne.studio/",
+    technologies: ["Astro", "Stripe", "SST"],
+  },
+  {
+    title: "BMW's Cloud Native Data Lake",
+    description: `I was part of the team building a data lake in the AWS Cloud, handling petabytes of data for the BMW Group. I worked as a full-stack developer on the data portal, a web app that enables everyone within the organization to share, find, understand, and work with data. The back end is based on an event-driven, serverless architecture in AWS using AppSync, Lambda, and DynamoDB. You can find a more detailed description of the project on the AWS blog.`,
+    image: bmwImage,
+    link: "https://aws.amazon.com/solutions/case-studies/bmw-group-case-study/",
+    technologies: ["AWS", "Python", "Terraform", "ETL", "React", "GraphQL"],
+  },
+  {
     title: "Stock Option Trading App",
     description: `A stock options trading platform helping traders optimize their investment strategies. I helped build two tools: a calculator that helped predict the profitability of different stock option strategies and an “opportunity scanner" that helped traders find profitable investment opportunities. As lead engineer, I helped architect, build, and run these tools with a focus on keeping the prices of more than 500k contracts up to date and displaying them in a performant web app.`,
     image: opcalcImage,
@@ -21,21 +36,7 @@ const projects = [
       "Next.js",
     ],
   },
-  {
-    title: "BMW's Cloud Native Data Lake",
-    description: `I was part of the team building a data lake in the AWS Cloud, handling petabytes of data for the BMW Group. I worked as a full-stack developer on the data portal, a web app that enables everyone within the organization to share, find, understand, and work with data. The back end is based on an event-driven, serverless architecture in AWS using AppSync, Lambda, and DynamoDB. You can find a more detailed description of the project on the AWS blog.`,
-    image: bmwImage,
-    link: "https://aws.amazon.com/solutions/case-studies/bmw-group-case-study/",
-    technologies: ["AWS", "Python", "Terraform", "ETL", "React", "GraphQL"],
-  },
-  {
-    title: "Pyne Studio",
-    description:
-      "Together with my wife, I run a fashion brand where we design, produce, and sell vintage-inspired one-of-a-kind pieces. We mostly sell online and via boutique wholesale-platforms and I take care of that. I built our custom home page and online shop, and make sure that our product data is synced correctly between our sales channels. I also take care of customer communications and have recently taking up tailoring.",
-    image: pyneImage,
-    link: "https://pyne.studio/",
-    technologies: ["Astro", "Stripe", "SST"],
-  },
+
   {
     title: "Smart Pricing for Retail",
     description: `A web app tailored to retail merchants that automatically imports a merchant's stock and sales data to make automated, data-driven pricing decisions. The system uses a mixture of battle-tested industry heuristics, modern AI models, and data analytics to create recommendations for pricing and inventory planning. I was the main developer responsible for designing and implementing the entire application dealing with the data ingestion and processing, as well as the customer-facing web application.`,
