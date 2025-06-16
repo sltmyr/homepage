@@ -17,24 +17,17 @@ const projects = [
   },
   {
     title: "BMW's Cloud Native Data Lake",
-    description: `I was part of the team building a data lake in the AWS Cloud, handling petabytes of data for the BMW Group. I worked as a full-stack developer on the data portal, a web app that enables everyone within the organization to share, find, understand, and work with data. The back end is based on an event-driven, serverless architecture in AWS using AppSync, Lambda, and DynamoDB. You can find a more detailed description of the project on the AWS blog.`,
+    description: `I was part of the team that built a data lake on AWS, handling petabytes of data for the BMW Group. I primarily worked on data pipelines responsible for ingesting large quantities of data through batch and streaming processes. I also helped build the data portal, a web application that enables users across the organization to share, discover, and work with data. You can find a more detailed description of the project on the AWS blog.`,
     image: bmwImage,
     link: "https://aws.amazon.com/solutions/case-studies/bmw-group-case-study/",
-    technologies: ["AWS", "Python", "Terraform", "ETL", "React", "GraphQL"],
+    technologies: ["AWS", "Python", "Terraform", "ETL", "AWS Glue", "Spark"],
   },
   {
     title: "Stock Option Trading App",
     description: `A stock options trading platform helping traders optimize their investment strategies. I helped build two tools: a calculator that helped predict the profitability of different stock option strategies and an “opportunity scanner" that helped traders find profitable investment opportunities. As lead engineer, I helped architect, build, and run these tools with a focus on keeping the prices of more than 500k contracts up to date and displaying them in a performant web app.`,
     image: opcalcImage,
     link: "https://app.opcalc.com/",
-    technologies: [
-      "AWS",
-      "Python",
-      "PostgreSQL",
-      "React",
-      "TypeScript",
-      "Next.js",
-    ],
+    technologies: ["AWS", "Python", "PostgreSQL", "React", "TypeScript"],
   },
 
   {
@@ -42,7 +35,7 @@ const projects = [
     description: `A web app tailored to retail merchants that automatically imports a merchant's stock and sales data to make automated, data-driven pricing decisions. The system uses a mixture of battle-tested industry heuristics, modern AI models, and data analytics to create recommendations for pricing and inventory planning. I was the main developer responsible for designing and implementing the entire application dealing with the data ingestion and processing, as well as the customer-facing web application.`,
     image: aiveeImage,
     link: "https://aivee.one",
-    technologies: ["React", "TypeScript", "Next.js", "Supabase", "AWS"],
+    technologies: ["React", "TypeScript", "LLMs", "Supabase", "AWS"],
   },
   {
     title: "Multichannel Solution for Retail",
