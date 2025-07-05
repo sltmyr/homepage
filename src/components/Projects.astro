@@ -9,14 +9,14 @@ import mboardImage from "../assets/m-board.svg";
 const projects = [
   {
     title: "BMW's Cloud Native Data Lake",
-    description: `I was part of the team building a petabyte-scale data lake on AWS for the BMW Group. I primarily worked on data pipelines responsible for ingesting large quantities of data through batch and streaming processes and lead a team of 10 engineers building the data portal that enables users across the organization to work with data. You can find a more detailed description of the project on the AWS blog.`,
+    description: `I was part of the team building a <strong>petabyte-scale data lake</strong> on AWS for the BMW Group. I primarily worked on <strong>data pipelines</strong> responsible for ingesting large quantities of data through batch and streaming processes and <strong>lead a team of 10 engineers</strong> building the data portal that enables users across the organization to work with data. You can find a more detailed description of the project on the AWS blog.`,
     image: bmwImage,
     link: "https://aws.amazon.com/solutions/case-studies/bmw-group-case-study/",
     technologies: ["AWS", "Python", "Terraform", "ETL", "AWS Glue", "Spark"],
   },
   {
     title: "Stock Option Trading App",
-    description: `A stock options trading platform helping traders optimize their investment strategies. I helped build two tools: a calculator that helped predict the profitability of different stock option strategies and an “opportunity scanner" that helped traders find profitable investment opportunities. As lead engineer, I helped architect, build, and run these tools with a focus on keeping the prices of more than 500k contracts up to date and displaying them in a performant web app.`,
+    description: `A stock options trading platform helping traders optimize their investment strategies. I helped build two tools: a calculator that helped predict the profitability of different stock option strategies and an "opportunity scanner" that helped traders find profitable investment opportunities. As <strong>lead engineer</strong>, I helped architect, build, and run these tools with a focus on keeping the prices of more than <strong>500k contracts</strong> up to date and displaying them in a performant web app.`,
     image: opcalcImage,
     link: "https://app.opcalc.com/",
     technologies: [
@@ -32,14 +32,14 @@ const projects = [
   {
     title: "Pyne Studio",
     description:
-      "Together with my wife, I run a fashion brand where we design, produce, and sell vintage-inspired one-of-a-kind pieces. We mostly sell online and via boutique wholesale-platforms and I take care of that. I built our custom home page and online shop, and make sure that our product data is synced correctly between our sales channels. I also take care of customer communications and have recently taken up tailoring.",
+      "Together with my wife, I run a <strong>fashion brand</strong> where we design, produce, and sell vintage-inspired one-of-a-kind pieces. We mostly sell online and via boutique wholesale-platforms and I take care of that. I built our custom home page and <strong>online shop</strong>, and make sure that our product data is synced correctly between our sales channels. I also take care of customer communications and have recently taken up tailoring.",
     image: pyneImage,
     link: "https://pyne.studio/",
     technologies: ["Astro", "Stripe", "SST"],
   },
   {
     title: "Smart Pricing for Retail",
-    description: `A web app tailored to retail merchants that automatically imports a merchant's stock and sales data to make automated, data-driven pricing decisions. The system uses a mixture of battle-tested industry heuristics, modern AI models, and data analytics to create recommendations for pricing and inventory planning. I was the main developer responsible for designing and implementing the entire application dealing with the data ingestion and processing, as well as the customer-facing web application.`,
+    description: `A <strong>web app</strong> tailored to retail merchants that automatically imports a merchant's stock and sales data to make automated, <strong>data-driven pricing decisions</strong>. The system uses a mixture of battle-tested industry heuristics, modern <strong>AI models</strong>, and data analytics to create recommendations for pricing and inventory planning. I was the <strong>main developer</strong> responsible for designing and implementing the entire application dealing with the data ingestion and processing, as well as the customer-facing web application.`,
     image: aiveeImage,
     link: "https://aivee.one",
     technologies: ["React", "TypeScript", "LLMs", "Supabase", "AWS", "CDK"],
@@ -47,7 +47,7 @@ const projects = [
   {
     title: "Multichannel Solution for Retail",
     description:
-      "An app that allows fashion retailers to sell their stock on various online channels like Amazon and Zalando. It takes care of stock upload, order processing, and smart pricing. I was responsible for evolving the product's architecture to be more reliable and cost-efficient, and managed to achieve a 40% reduction in monthly cloud spend while at the same time decreasing the number of customer incident reports.",
+      "An app that allows fashion retailers to sell their stock on various online channels like Amazon and Zalando. It takes care of stock upload, order processing, and smart pricing. I was responsible for <strong>evolving the product's architecture</strong> to be more reliable and cost-efficient, and managed to achieve a <strong>40% reduction</strong> in monthly cloud spend while at the same time decreasing the number of customer incident reports.",
     image: mboardImage,
     link: "https://michelberger.digital/products/m-board",
     technologies: ["AWS", "Python", "Elasticsearch", "ETL", "CDK"],
@@ -74,9 +74,10 @@ const projects = [
             <h3 class="text-3xl lg:text-5xl font-bold text-center max-w-prose mx-auto">
               {project.title}
             </h3>
-            <p class="text-lg max-w-prose mx-auto font-serif leading-relaxed">
-              {project.description}
-            </p>
+            <p
+              class="text-lg max-w-prose mx-auto font-serif leading-relaxed"
+              set:html={project.description}
+            />
 
             <div class="flex flex-wrap gap-3 justify-center max-w-prose mx-auto">
               {project.technologies.map((tech) => (
