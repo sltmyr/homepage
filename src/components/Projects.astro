@@ -8,16 +8,8 @@ import mboardImage from "../assets/m-board.svg";
 
 const projects = [
   {
-    title: "Pyne Studio",
-    description:
-      "Together with my wife, I run a fashion brand where we design, produce, and sell vintage-inspired one-of-a-kind pieces. We mostly sell online and via boutique wholesale-platforms and I take care of that. I built our custom home page and online shop, and make sure that our product data is synced correctly between our sales channels. I also take care of customer communications and have recently taken up tailoring.",
-    image: pyneImage,
-    link: "https://pyne.studio/",
-    technologies: ["Astro", "Stripe", "SST"],
-  },
-  {
     title: "BMW's Cloud Native Data Lake",
-    description: `I was part of the team that built a data lake on AWS, handling petabytes of data for the BMW Group. I primarily worked on data pipelines responsible for ingesting large quantities of data through batch and streaming processes. I also helped build the data portal, a web application that enables users across the organization to share, discover, and work with data. You can find a more detailed description of the project on the AWS blog.`,
+    description: `I was part of the team building a petabyte-scale data lake on AWS for the BMW Group. I primarily worked on data pipelines responsible for ingesting large quantities of data through batch and streaming processes and lead a team of 10 engineers building the data portal that enables users across the organization to work with data. You can find a more detailed description of the project on the AWS blog.`,
     image: bmwImage,
     link: "https://aws.amazon.com/solutions/case-studies/bmw-group-case-study/",
     technologies: ["AWS", "Python", "Terraform", "ETL", "AWS Glue", "Spark"],
@@ -27,15 +19,30 @@ const projects = [
     description: `A stock options trading platform helping traders optimize their investment strategies. I helped build two tools: a calculator that helped predict the profitability of different stock option strategies and an “opportunity scanner" that helped traders find profitable investment opportunities. As lead engineer, I helped architect, build, and run these tools with a focus on keeping the prices of more than 500k contracts up to date and displaying them in a performant web app.`,
     image: opcalcImage,
     link: "https://app.opcalc.com/",
-    technologies: ["AWS", "Python", "PostgreSQL", "React", "TypeScript"],
+    technologies: [
+      "AWS",
+      "Python",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "Terraform",
+    ],
   },
 
+  {
+    title: "Pyne Studio",
+    description:
+      "Together with my wife, I run a fashion brand where we design, produce, and sell vintage-inspired one-of-a-kind pieces. We mostly sell online and via boutique wholesale-platforms and I take care of that. I built our custom home page and online shop, and make sure that our product data is synced correctly between our sales channels. I also take care of customer communications and have recently taken up tailoring.",
+    image: pyneImage,
+    link: "https://pyne.studio/",
+    technologies: ["Astro", "Stripe", "SST"],
+  },
   {
     title: "Smart Pricing for Retail",
     description: `A web app tailored to retail merchants that automatically imports a merchant's stock and sales data to make automated, data-driven pricing decisions. The system uses a mixture of battle-tested industry heuristics, modern AI models, and data analytics to create recommendations for pricing and inventory planning. I was the main developer responsible for designing and implementing the entire application dealing with the data ingestion and processing, as well as the customer-facing web application.`,
     image: aiveeImage,
     link: "https://aivee.one",
-    technologies: ["React", "TypeScript", "LLMs", "Supabase", "AWS"],
+    technologies: ["React", "TypeScript", "LLMs", "Supabase", "AWS", "CDK"],
   },
   {
     title: "Multichannel Solution for Retail",
@@ -43,7 +50,7 @@ const projects = [
       "An app that allows fashion retailers to sell their stock on various online channels like Amazon and Zalando. It takes care of stock upload, order processing, and smart pricing. I was responsible for evolving the product's architecture to be more reliable and cost-efficient, and managed to achieve a 40% reduction in monthly cloud spend while at the same time decreasing the number of customer incident reports.",
     image: mboardImage,
     link: "https://michelberger.digital/products/m-board",
-    technologies: ["AWS", "Python", "Elasticsearch", "ETL"],
+    technologies: ["AWS", "Python", "Elasticsearch", "ETL", "CDK"],
   },
 ];
 ---
