@@ -2,43 +2,43 @@
 const technologies = [
   {
     name: "AWS",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png",
+    icon: "/tech-icons/aws.svg",
   },
   {
     name: "Terraform",
-    icon: "https://logodix.com/logo/1686023.png",
+    icon: "/tech-icons/terraform.svg",
   },
   {
     name: "Docker",
-    icon: "https://logodix.com/logo/826596.png",
+    icon: "/tech-icons/docker.svg",
   },
   {
     name: "Python",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/512px-Python-logo-notext.svg.png",
+    icon: "/tech-icons/python.svg",
   },
   {
     name: "PostgreSQL",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/512px-Postgresql_elephant.svg.png",
+    icon: "/tech-icons/postgresql.svg",
   },
   {
     name: "Airflow",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Cib-apache-airflow_%28CoreUI_Icons_v1.0.0%29.svg",
+    icon: "/tech-icons/airflow.svg",
   },
   {
     name: "Spark",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Apache_Spark_logo.svg/512px-Apache_Spark_logo.svg.png",
+    icon: "/tech-icons/spark.svg",
   },
   {
     name: "Databricks",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Databricks-c40eaf44_%281%29.png",
+    icon: "/tech-icons/databricks.svg",
   },
   {
     name: "React",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
+    icon: "/tech-icons/react.svg",
   },
   {
     name: "TypeScript",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png",
+    icon: "/tech-icons/typescript.svg",
   },
 ];
 ---
@@ -122,7 +122,8 @@ const technologies = [
                 <img
                   src={tech.icon}
                   alt={tech.name}
-                  class="max-w-full max-h-full"
+                  class="w-full h-full object-contain"
+                  loading="lazy"
                 />
               </div>
               <span class="text-sm font-medium text-secondary text-center">
